@@ -1,0 +1,42 @@
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&family=Cinzel:wght@400;600;700&family=Inter:wght@400;600;700&family=Comic+Neue:wght@400;700&family=Poppins:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-playful: 'Fredoka One', cursive;
+  --font-script: 'Pacifico', cursive;
+  --font-elegant: 'Cinzel', serif;
+  --font-modern: 'Inter', sans-serif;
+  --font-funny: 'Comic Neue', cursive;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
