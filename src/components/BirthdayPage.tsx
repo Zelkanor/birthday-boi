@@ -7,14 +7,14 @@ function BirthdayPage() {
   const [showConfetti, setShowConfetti] = useState(false);
   const [showSprite, setShowSprite] = useState(false);
   const [spritePhase, setSpritePhase] = useState<'entering' | 'eating' | 'leaving'>('entering');
-  const [cakeImage, setCakeImage] = useState('/images/lit.png');
+  const [cakeImage, setCakeImage] = useState('./images/lit.png');
   const blowTimerRef = useRef<number | null>(null);
   const [isHoldingButton, setIsHoldingButton] = useState(false);
 
   // Handle the wish complete (candles blown out)
   const handleWishComplete = () => {
     setIsLit(false);
-    setCakeImage('/images/blown.png');
+    setCakeImage('./images/blown.png');
     setShowConfetti(true);
 
     // After 3 seconds, show the sprite
@@ -29,7 +29,7 @@ function BirthdayPage() {
       // After sprite enters, show eating phase
       setTimeout(() => {
         setSpritePhase('eating');
-        setCakeImage('/images/ate.png');
+        setCakeImage('./images/ate.png');
       }, 1500);
     } else if (spritePhase === 'eating') {
       // After eating, exit

@@ -19,13 +19,13 @@ function App() {
 
   useEffect(() => {
     // Initialize audio files
-    landingAudioRef.current = new Audio('/audio/landing.mp3');
+    landingAudioRef.current = new Audio('./audio/landing.mp3');
     landingAudioRef.current.loop = true;
-    quizAudioRef.current = new Audio('/audio/quiz.mp3');
+    quizAudioRef.current = new Audio('./audio/quiz.mp3');
     quizAudioRef.current.loop = true;
-    spriteAudioRef.current = new Audio('/audio/sprite.mp3');
+    spriteAudioRef.current = new Audio('./audio/sprite.mp3');
     spriteAudioRef.current.loop = true;
-    birthdayAudioRef.current = new Audio('/audio/birthday.mp3');
+    birthdayAudioRef.current = new Audio('./audio/birthday.mp3');
     birthdayAudioRef.current.loop = true;
 
     // Start landing music

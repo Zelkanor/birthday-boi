@@ -43,8 +43,8 @@ function QuizPage({ onQuizComplete }: QuizPageProps) {
 
   useEffect(() => {
     // Initialize sound effects
-    correctSoundRef.current = new Audio('/audio/correct.mp3');
-    wrongSoundRef.current = new Audio('/audio/wrong.mp3');
+    correctSoundRef.current = new Audio('./audio/correct.mp3');
+    wrongSoundRef.current = new Audio('./audio/wrong.mp3');
   }, []);
 
   const handleAnswerClick = (isMovable?: boolean) => {
