@@ -12,8 +12,8 @@ function LandingPage({ onYesClick }: LandingPageProps) {
 
   useEffect(() => {
     // Initialize sound effects
-    correctSoundRef.current = new Audio('/audio/correct.mp3');
-    wrongSoundRef.current = new Audio('/audio/wrong.mp3');
+    correctSoundRef.current = new Audio(`${import.meta.env.BASE_URL}audio/correct.mp3`);
+    wrongSoundRef.current = new Audio(`${import.meta.env.BASE_URL}audio/wrong.mp3`);
   }, []);
 
   const handleYesClick = () => {

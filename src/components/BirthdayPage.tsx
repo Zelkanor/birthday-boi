@@ -7,14 +7,14 @@ function BirthdayPage() {
   const [showConfetti, setShowConfetti] = useState(false);
   const [showSprite, setShowSprite] = useState(false);
   const [spritePhase, setSpritePhase] = useState<'entering' | 'eating' | 'leaving'>('entering');
-  const [cakeImage, setCakeImage] = useState('./images/lit.png');
+  const [cakeImage, setCakeImage] = useState(`${import.meta.env.BASE_URL}images/lit.png`);
   const blowTimerRef = useRef<number | null>(null);
   const [isHoldingButton, setIsHoldingButton] = useState(false);
 
   // Handle the wish complete (candles blown out)
   const handleWishComplete = () => {
     setIsLit(false);
-    setCakeImage('./images/blown.png');
+    setCakeImage(`${import.meta.env.BASE_URL}images/blown.png`);
     setShowConfetti(true);
 
     // After 3 seconds, show the sprite
@@ -29,7 +29,7 @@ function BirthdayPage() {
       // After sprite enters, show eating phase
       setTimeout(() => {
         setSpritePhase('eating');
-        setCakeImage('./images/ate.png');
+        setCakeImage(`${import.meta.env.BASE_URL}images/ate.png`);
       }, 1500);
     } else if (spritePhase === 'eating') {
       // After eating, exit
@@ -189,7 +189,7 @@ function BirthdayPage() {
               transition={{ duration: 1, ease: 'easeOut' }}
             >
               <img
-                src="/sprites/chamber.png"
+                src={`${import.meta.env.BASE_URL}sprites/chamber.png`}
                 alt="Sprite"
                 className="w-32 h-32 md:w-48 md:h-48"
               />
@@ -209,7 +209,7 @@ function BirthdayPage() {
                 </p>
               </div>
               <img
-                src="/sprites/chamber.png"
+                src={`${import.meta.env.BASE_URL}sprites/chamber.png`}
                 alt="Sprite eating"
                 className="w-32 h-32 md:w-48 md:h-48 animate-bounce"
               />
@@ -224,7 +224,7 @@ function BirthdayPage() {
               transition={{ duration: 1.5, ease: 'easeIn' }}
             >
               <img
-                src="/sprites/chamber.png"
+                src={`${import.meta.env.BASE_URL}sprites/chamber.png`}
                 alt="Sprite leaving"
                 className="w-32 h-32 md:w-48 md:h-48"
               />

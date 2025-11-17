@@ -24,7 +24,7 @@ function SpriteScene({ onSpriteClick }: SpriteSceneProps) {
 
   useEffect(() => {
     // Play confetti sound when component mounts (curtain opens)
-    confettiSoundRef.current = new Audio('/audio/confetti.mp3');
+    confettiSoundRef.current = new Audio(`${import.meta.env.BASE_URL}audio/confetti.mp3`);
     confettiSoundRef.current.play().catch(err => console.log('Confetti sound play failed:', err));
 
     return () => {
@@ -61,7 +61,7 @@ function SpriteScene({ onSpriteClick }: SpriteSceneProps) {
         {/* Sprite Character */}
         <div className="relative">
           <img
-            src="/sprites/chamber.png"
+            src={`${import.meta.env.BASE_URL}sprites/chamber.png`}
             alt="Character sprite"
             className="w-48 h-48 md:w-64 md:h-64 object-contain animate-float"
           />
